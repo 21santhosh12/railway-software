@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Bike Parking System</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/register.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-header">
+            <h1><i class="fas fa-motorcycle"></i> Bike Parking</h1>
+            <p>Registration Information</p>
+        </div>
+
+        <div class="info-card">
+            <div class="info-icon">
+                <i class="fas fa-info-circle"></i>
+            </div>
+            <h2>User Registration</h2>
+            <p>Regular users cannot register directly. Please contact an administrator to create an account for you.</p>
+            
+            <div class="action-buttons">
+                <a href="{{ url_for('route_login') }}" class="btn btn-primary">
+                    <i class="fas fa-sign-in-alt"></i> Go to Login
+                </a>
+                <a href="{{ url_for('route_admin_register') }}" class="btn btn-secondary">
+                    <i class="fas fa-user-shield"></i> Admin Registration
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

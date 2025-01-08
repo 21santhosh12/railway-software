@@ -1,0 +1,246 @@
+:root {
+    --primary-color: #1a237e;
+    --secondary-color: #283593;
+    --accent-color: #3949ab;
+    --success-color: #43a047;
+    --danger-color: #e53935;
+    --background-color: #f5f6fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.register-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.register-header h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.register-header p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.form-floating {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    border: 2px solid #e0e0e0;
+    padding: 0.75rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(57, 73, 171, 0.25);
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.input-group-text {
+    background: #f8f9fa;
+    border: 2px solid #e0e0e0;
+    border-left: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.input-group-text:hover {
+    background: #e9ecef;
+}
+
+.btn-register {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.btn-register:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-link {
+    text-align: center;
+    color: #666;
+}
+
+.login-link a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.login-link a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.alert {
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    font-weight: 500;
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, #ffebee, #ffcdd2);
+    color: #c62828;
+}
+
+.alert-success {
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    color: #2e7d32;
+}
+
+/* Password toggle button */
+.password-toggle {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.password-toggle:hover {
+    color: var(--primary-color);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.register-container {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Password strength indicator */
+.password-strength {
+    height: 5px;
+    margin-top: 5px;
+    border-radius: 2.5px;
+    transition: all 0.3s ease;
+}
+
+.strength-weak {
+    background: var(--danger-color);
+    width: 33.33%;
+}
+
+.strength-medium {
+    background: #ffa000;
+    width: 66.66%;
+}
+
+.strength-strong {
+    background: var(--success-color);
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .register-container {
+        padding: 1.5rem;
+    }
+
+    .register-header h1 {
+        font-size: 1.75rem;
+    }
+}
+
+.info-card {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.info-card h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.info-card p {
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.action-buttons .btn {
+    padding: 0.8rem 1.5rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.action-buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.action-buttons .btn-primary {
+    background: var(--primary-color);
+    border: none;
+}
+
+.action-buttons .btn-secondary {
+    background: var(--secondary-color);
+    border: none;
+} 
