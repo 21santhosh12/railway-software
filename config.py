@@ -19,7 +19,6 @@ completed_records = db.completed_records
 
 # Application Configuration
 SECRET_KEY = 'app secret key'
-MASTER_KEY = os.getenv('MASTER_KEY')
 
 # Global variables
 default_user_setup_done = False 
