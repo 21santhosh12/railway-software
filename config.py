@@ -5,8 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # MongoDB Configuration
-MONGO_URI = 'mongodb+srv://santhosh:2002Sk@parkingtokensystem.o4l8l.mongodb.net/?retryWrites=true&w=majority&ssl=true&authSource=admin&appName=ParkingTokenSystem'
-
+MONGO_URI = 'your db link'
 # Create a MongoClient instance
 client = MongoClient(MONGO_URI)
 
@@ -19,7 +18,7 @@ vehicles_collection = db.vehicles
 completed_records = db.completed_records
 
 # Application Configuration
-SECRET_KEY = 'Santhosh@2002'
+SECRET_KEY = 'app secret key'
 MASTER_KEY = os.getenv('MASTER_KEY')
 
 # Global variables
